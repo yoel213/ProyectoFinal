@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<button id="button1" name="Button1" form="button" onclick=$.get("http://myservicio", function( data ) {
+		  document.getElementById(“iframe2”).src=data.url;});
+>
+		Click me!</button>
+
+	<iframe id="iframe2" title="mapa"
+		width="300" height="200"
+		src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+	</iframe>
+
+</body>
+</html>
